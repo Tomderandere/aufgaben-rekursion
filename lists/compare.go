@@ -4,6 +4,17 @@ package lists
 // Verwenden Sie Rekursion und benutzen Sie NICHT die len-Funktion.
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func ListsEqual(list1, list2 []int) bool {
-	// TODO
-	return false
+	if Empty(list1) == true && Empty(list2) == true {
+		return true
+	}
+	if (Empty(list1) || Empty(list2)) && !(Empty(list1) && Empty(list2)) {
+		return false
+	}
+	n := 0
+	if list1[n] != list2[n] {
+		return false
+	}
+
+	return ListsEqual(list1[1:], list2[1:])
+
 }
