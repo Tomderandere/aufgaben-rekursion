@@ -7,7 +7,7 @@ package lists
 // Verwenden Sie Rekursion und benutzen Sie NICHT die len-Funktion.
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func RemoveElement(list []int, pos int) []int {
-	if Empty(list) == true {
+	if Empty(list) {
 		return list
 	}
 	if pos == 0 {

@@ -5,7 +5,7 @@ package lists
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func ListsEqual(list1, list2 []int) bool {
 
-	if Empty(list1) == true && Empty(list2) == true {
+	if Empty(list1) && Empty(list2) {
 		return true
 	}
 	if (Empty(list1) || Empty(list2)) && !(Empty(list1) && Empty(list2)) {
