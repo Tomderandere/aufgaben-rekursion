@@ -26,6 +26,16 @@ func FilterLess(list []int, key int) []int {
 // Verwenden Sie Rekursion und benutzen Sie NICHT die len-Funktion.
 // Sie können die Hilfsfunktion Empty aus empty.go verwenden.
 func FilterGreater(list []int, key int) []int {
-	// TODO
-	return list
+	result := []int{}
+	if Empty(list) {
+		return []int{}
+	}
+
+	if list[0] >= key {
+		result = append(result, list[0])
+	}
+	rest := FilterGreater(list[1:], key)
+	result = append(result, rest...)
+	return result
+
 }
